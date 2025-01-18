@@ -11,7 +11,26 @@ const TestPage = () => {
         <Typography variant="body2">Body 2</Typography>
         <Button variant="text">Button</Button>
       </Box>
-
+      <Box>
+        <Button fullWidth variant="contained" color="primary">
+          Button Contained Primary
+        </Button>
+        <Button fullWidth variant="contained" color="secondary">
+          Button Contained Secondary
+        </Button>
+        <Button fullWidth variant="contained" disabled>
+          Button Contained Disabled
+        </Button>
+        <Button fullWidth variant="text" color="secondary">
+          Button Text Secondary
+        </Button>
+        <Button fullWidth variant="text" color="primary">
+          Button Text Primary
+        </Button>
+        <Button fullWidth variant="outlined">
+          Button Outlined Root
+        </Button>
+      </Box>
       <div>
         <Qrcode url="https://www.naver.com" />
       </div>

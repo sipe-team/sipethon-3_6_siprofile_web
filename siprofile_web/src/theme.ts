@@ -8,6 +8,9 @@ const theme = createTheme({
     primary: {
       main: '#00FFFF',
     },
+    secondary: {
+      main: '#4A5568',
+    },
     grey: {
       '100': '#2D3748',
       '200': '#4A5568',
@@ -54,9 +57,27 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
-        text: {
+        root: {
+          padding: '16px',
           fontSize: '18px',
           fontWeight: 600,
+          borderRadius: '5px',
+        },
+        contained: {
+          '&:disabled': {
+            color: '#131418',
+            backgroundColor: '#2D3748',
+          },
+        },
+        containedPrimary: {
+          color: '#131418',
+        },
+        textSecondary: {
+          color: '#FFFFFF',
+        },
+        outlined: {
+          borderColor: '#FFFFFF',
+          color: '#FFFFFF',
         },
       },
     },
