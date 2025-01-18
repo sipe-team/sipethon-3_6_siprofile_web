@@ -20,7 +20,7 @@ export const Viewport = styled(Box)(({ theme }) => {
     position: 'relative',
     width: breakpoints.values.xl,
     height: '100%',
-    minHeight: '480px',
+    minHeight: '667px',
     maxHeight: '917px',
     border: '1px solid white',
     overflowY: 'auto',
