@@ -3,6 +3,7 @@ import { Box, Card, CardContent, Chip, Typography } from '@mui/material';
 const data = {
   profileImgUrl: '/src/assets/profile-logo.svg',
   position: 'Android',
+  postionImgUrl: '/src/assets/android.svg',
   name: '사이프',
   labels: [
     {
@@ -27,6 +28,7 @@ const ProfileCard = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
+        position: 'relative',
       }}
     >
       <CardContent
@@ -41,6 +43,19 @@ const ProfileCard = () => {
         <img src="/src/assets/profile-sipe-logo.svg" width={72} height={20} />
         <img src={data.profileImgUrl} width={120} height={100} />
       </CardContent>
+
+      <img
+        src={data.postionImgUrl}
+        width={80}
+        height={80}
+        style={{
+          position: 'absolute',
+          top: '200px',
+          left: '76%',
+          transform: 'translateX(-50%)',
+        }}
+      />
+
       <CardContent
         sx={{ backgroundColor: '#fff', borderRadius: '0 0 16px 16px ', padding: '8px 16px' }}
       >
