@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import CreateCardContext from '../context/CreateCardContext';
 import PageHistoryContext from '../context/PageHistoryContext';
 import ImageUploadButton from '../components/ImageUploadButton';
+import PositionRadioButton from '../components/PositionRadioButton';
 
 const Color = () => {
   const createCardContext = useContext(CreateCardContext);
@@ -126,7 +127,7 @@ const Position = () => {
     return (
       <>
         <PageDescription pageTitle="포지션을 선택해 주세요" pageSubTitle={`${name} 님의`} />
-        <TextField placeholder="이름" variant="standard" />
+        <PositionRadioButton />
         <FloatingButtonContainer>
           <ContainedPrimaryButton
             buttonProps={{
