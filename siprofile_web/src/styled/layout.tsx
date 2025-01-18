@@ -17,10 +17,22 @@ export const Background = styled(Box)(({ theme }) => {
 export const Viewport = styled(Box)(({ theme }) => {
   const { breakpoints } = theme as Theme;
   return {
+    position: 'relative',
     width: breakpoints.values.xl,
     minHeight: '480px',
     border: '1px solid white',
     overflowY: 'scroll',
     backgroundColor: 'inherit',
   };
+});
+
+export const FloatingButtonContainer = styled(Box)({
+  position: 'absolute',
+  left: 0,
+  bottom: 0,
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '16px 24px',
+  gap: '8px',
 });
