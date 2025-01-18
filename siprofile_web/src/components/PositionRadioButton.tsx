@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormControl, FormControlLabel, Radio, RadioGroup } from '@mui/material';
+import { FormControl, FormControlLabel, Radio, RadioGroup, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const options = [
@@ -66,13 +66,13 @@ const PositionRadioButton: React.FC = () => {
   };
 
   return (
-    <FormControl component="fieldset">
+    <FormControl component="fieldset" fullWidth sx={{ padding: '24px' }}>
       <RadioGroup
         value={selectedValue}
         onChange={handleChange}
         aria-label="Options"
         name="options"
-        style={{ display: 'flex', flexDirection: 'column', gap: '16px', color:'#fff'}}
+        style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: '#fff' }}
       >
         {options.map((option) => (
           <FormControlLabel
@@ -85,7 +85,12 @@ const PositionRadioButton: React.FC = () => {
                   src={selectedValue === option.value ? option.active_icon : option.icon}
                   alt={option.icon}
                 />
-                {option.label}
+                <Typography
+                  variant="body1"
+                  color={selectedValue === option.value ? 'primary' : '#FFFFFF'}
+                >
+                  {option.label}
+                </Typography>
               </LabelContainer>
             }
             labelPlacement="start"

@@ -4,6 +4,7 @@ import PageContainer from '../components/PageContainer';
 import { useNavigate } from 'react-router-dom';
 import { FloatingButtonContainer } from '../styled/layout';
 import { ContainedPrimaryButton, ContainedSecondaryButton } from '../styled/button';
+import { Button } from '@mui/material';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const HomePage = () => {
           mb: '25px',
         }}
       />
-      <img src={introduction} alt="introduction" width={200} height={320} />
+      <img src={introduction} alt="introduction" width={150} height={230} />
       <FloatingButtonContainer>
         <ContainedSecondaryButton
           buttonProps={{
@@ -37,6 +38,14 @@ const HomePage = () => {
         >
           회원가입
         </ContainedPrimaryButton>
+        <Button
+          variant="outlined"
+          onClick={() => {
+            navigate('/create');
+          }}
+        >
+          카드 생성하기
+        </Button>
       </FloatingButtonContainer>
     </PageContainer>
   );

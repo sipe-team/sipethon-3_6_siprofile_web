@@ -10,36 +10,37 @@ import PageHistoryContext from '../context/PageHistoryContext';
 import ImageUploadButton from '../components/ImageUploadButton';
 import PositionRadioButton from '../components/PositionRadioButton';
 
-const Color = () => {
-  const createCardContext = useContext(CreateCardContext);
+// const Color = () => {
+//   const createCardContext = useContext(CreateCardContext);
 
-  if (createCardContext) {
-    return (
-      <>
-        <PageDescription pageTitle="배경 컬러" pageSubTitle="프로필 카드의 배경으로 사용할" />
-        <FloatingButtonContainer>
-          <ContainedPrimaryButton
-            buttonProps={{
-              onClick: () => {
-                console.log('SUBMIT');
-              },
-            }}
-          >
-            다음
-          </ContainedPrimaryButton>
-        </FloatingButtonContainer>
-      </>
-    );
-  }
-  return null;
-};
+//   if (createCardContext) {
+//     return (
+//       <>
+//         <PageDescription pageTitle="배경 컬러" pageSubTitle="프로필 카드의 배경으로 사용할" />
+//         <FloatingButtonContainer>
+//           <ContainedPrimaryButton
+//             buttonProps={{
+//               onClick: () => {
+//                 console.log('SUBMIT');
+//               },
+//             }}
+//           >
+//             다음
+//           </ContainedPrimaryButton>
+//         </FloatingButtonContainer>
+//       </>
+//     );
+//   }
+//   return null;
+// };
 
 const Link = () => {
+  const navigate = useNavigate();
   const pageHistoryContext = useContext(PageHistoryContext);
   const createCardContext = useContext(CreateCardContext);
 
   if (pageHistoryContext && createCardContext) {
-    const { pageHistory, setPageHistory } = pageHistoryContext;
+    // const { pageHistory, setPageHistory } = pageHistoryContext;
     const { link, setLink } = createCardContext;
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +49,8 @@ const Link = () => {
     };
 
     const handleNext = () => {
-      setPageHistory([...pageHistory, <Color />]);
+      navigate('/view');
+      // setPageHistory([...pageHistory, <Color />]);
     };
 
     return (
@@ -56,6 +58,7 @@ const Link = () => {
         <PageDescription
           pageTitle="링크가 있다면 입력해 주세요"
           pageSubTitle="추가로 보여주고 싶은"
+          boxProps={{ mb: '169px' }}
         />
         <TextField placeholder="링크" variant="standard" value={link} onChange={handleChange} />
         <FloatingButtonContainer>
@@ -97,7 +100,11 @@ const Keyword = () => {
 
     return (
       <>
-        <PageDescription pageTitle="키워드를 작성해 주세요" pageSubTitle="자신을 표현할 수 있는" />
+        <PageDescription
+          pageTitle="키워드를 작성해 주세요"
+          pageSubTitle="자신을 표현할 수 있는"
+          boxProps={{ mb: '169px' }}
+        />
         <TextField placeholder="키워드" variant="standard" onChange={handleChange} />
         <FloatingButtonContainer>
           <ContainedPrimaryButton
@@ -126,7 +133,11 @@ const Position = () => {
 
     return (
       <>
-        <PageDescription pageTitle="포지션을 선택해 주세요" pageSubTitle={`${name} 님의`} />
+        <PageDescription
+          pageTitle="포지션을 선택해 주세요"
+          pageSubTitle={`${name} 님의`}
+          boxProps={{ mb: '29px' }}
+        />
         <PositionRadioButton />
         <FloatingButtonContainer>
           <ContainedPrimaryButton
