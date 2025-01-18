@@ -7,6 +7,7 @@ import { ContainedPrimaryButton } from '../styled/button';
 import { useNavigate } from 'react-router-dom';
 import CreateCardContext from '../context/CreateCardContext';
 import PageHistoryContext from '../context/PageHistoryContext';
+import ImageUploadButton from '../components/ImageUploadButton';
 
 const Color = () => {
   const createCardContext = useContext(CreateCardContext);
@@ -159,7 +160,14 @@ const Name = () => {
     return (
       <>
         <PageDescription pageTitle="이름을 입력해 주세요" pageSubTitle="사이프로필에서 사용할" />
-        <TextField placeholder="이름" variant="standard" value={name} onChange={handleChange} />
+        <ImageUploadButton sx={{ marginBottom: '55px' }} />
+        <TextField
+          placeholder="이름"
+          variant="standard"
+          value={name}
+          onChange={handleChange}
+          sx={{ marginBottom: '59px' }}
+        />
         <FloatingButtonContainer>
           <ContainedPrimaryButton
             buttonProps={{
