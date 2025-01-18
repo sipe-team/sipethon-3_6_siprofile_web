@@ -1,12 +1,13 @@
 import { useState, ReactElement, useContext } from 'react';
 import PageContainer from '../components/PageContainer';
 import PageDescription from '../components/PageDescription';
-import { TextField, Button } from '@mui/material';
+import { TextField, Button, Box, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 import { FloatingButtonContainer } from '../styled/layout';
 import { ContainedPrimaryButton } from '../styled/button';
 import { useNavigate } from 'react-router-dom';
 import CreateCardContext from '../context/CreateCardContext';
 import PageHistoryContext from '../context/PageHistoryContext';
+import PositionRadioButton from '../components/PositionRadioButton';
 
 const Color = () => {
   return (
@@ -85,7 +86,7 @@ const Position = () => {
     return (
       <>
         <PageDescription pageTitle="포지션 선택" pageSubTitle="포지션 선택" />
-        <TextField placeholder="이름" variant="standard" />
+        <PositionRadioButton />
         <FloatingButtonContainer>
           <ContainedPrimaryButton
             buttonProps={{
