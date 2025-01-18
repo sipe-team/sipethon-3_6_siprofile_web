@@ -19,10 +19,27 @@ export const Viewport = styled(Box)(({ theme }) => {
   return {
     position: 'relative',
     width: breakpoints.values.xl,
+    height: '100%',
     minHeight: '480px',
+    maxHeight: '917px',
     border: '1px solid white',
-    overflowY: 'scroll',
+    overflowY: 'auto',
     backgroundColor: 'inherit',
+    '&::-webkit-scrollbar': {
+      width: '8px',
+      height: '8px',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: 'rgba(0, 0, 0, 0.3)',
+      borderRadius: '4px',
+    },
+    '&::-webkit-scrollbar-thumb:hover': {
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    '&::-webkit-scrollbar-track': {
+      backgroundColor: 'rgba(0, 0, 0, 0.1)',
+      borderRadius: '4px',
+    },
   };
 });
 

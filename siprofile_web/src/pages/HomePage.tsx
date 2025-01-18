@@ -17,7 +17,7 @@ const HomePage = () => {
           mb: '25px',
         }}
       />
-      <img src={introduction} alt="introduction" width={250} height={400} />
+      <img src={introduction} alt="introduction" width={200} height={320} />
       <FloatingButtonContainer>
         <ContainedSecondaryButton
           buttonProps={{
