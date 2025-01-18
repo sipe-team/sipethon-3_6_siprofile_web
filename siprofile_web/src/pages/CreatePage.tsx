@@ -5,7 +5,7 @@ import { TextField, Button } from '@mui/material';
 import { FloatingButtonContainer } from '../styled/layout';
 import { ContainedPrimaryButton } from '../styled/button';
 import { useNavigate } from 'react-router-dom';
-import CreateCardContext from '../context/createCardContext';
+import CreateCardContext from '../context/CreateCardContext';
 import PageHistoryContext from '../context/PageHistoryContext';
 
 const Color = () => {
