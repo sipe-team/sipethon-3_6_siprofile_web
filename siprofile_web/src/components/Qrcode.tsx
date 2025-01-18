@@ -13,15 +13,15 @@ const Qrcode = ({ url }: IQrcode) => {
           position: 'relative',
           height: 'auto',
           margin: '0 auto',
-          maxWidth: 64,
+          maxWidth: 128,
           width: '100%',
         }}
       >
         <QRCode
-          size={256}
+          size={128}
           style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
           value={url}
-          viewBox={`0 0 256 256`}
+          viewBox={`0 0 128 128`}
           level="H"
         />
         <img
