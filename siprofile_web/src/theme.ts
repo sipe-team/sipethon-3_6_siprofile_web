@@ -42,10 +42,12 @@ const theme = createTheme({
         h1: {
           fontSize: '28px',
           fontWeight: 600,
+          color: '#FFFFFF',
         },
         h2: {
           fontSize: '20px',
           fontWeight: 500,
+          color: '#CBD5E0',
         },
         body1: {
           fontSize: '16px',
@@ -59,7 +61,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           padding: '16px',
-          fontSize: '18px',
+          fontSize: '16px',
           fontWeight: 600,
           borderRadius: '5px',
         },
