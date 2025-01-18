@@ -1,17 +1,34 @@
 import { createTheme } from '@mui/material';
 
-const fontFace = `
- @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
- }
-`;
-
 const theme = createTheme({
-  palette: {},
-  breakpoints: {},
+  palette: {
+    background: {
+      default: '#131418',
+    },
+    primary: {
+      main: '#00FFFF',
+    },
+    grey: {
+      '100': '#2D3748',
+      '200': '#4A5568',
+      '300': '#718096',
+      '400': '#A0AEC0',
+      '500': '#A0AEC0',
+      '600': '#CBD5E0',
+      '700': '#E2E8F0',
+      '800': '#EDF2F7',
+      '900': '#F7FAFC',
+    },
+  },
+  breakpoints: {
+    values: {
+      xl: 412,
+      lg: 412,
+      md: 412,
+      sm: 412,
+      xs: 412,
+    },
+  },
   typography: {
     fontFamily:
       'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif',
@@ -42,14 +59,6 @@ const theme = createTheme({
           fontWeight: 600,
         },
       },
-    },
-    MuiCssBaseline: {
-      styleOverrides: `
-     ${fontFace}
-     body {
-      font-family: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif';
-     }
-    `,
     },
   },
 });
