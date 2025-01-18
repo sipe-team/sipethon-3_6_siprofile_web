@@ -106,6 +106,9 @@ const theme = createTheme({
       },
     },
     MuiTextField: {
+      defaultProps: {
+        autoComplete: 'off',
+      },
       styleOverrides: {
         root: {
           borderBottom: '1px solid #4A5568',
