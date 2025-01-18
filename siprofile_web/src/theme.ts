@@ -22,6 +22,9 @@ const theme = createTheme({
       '800': '#EDF2F7',
       '900': '#F7FAFC',
     },
+    error: {
+      main: '#FF334B',
+    },
   },
   breakpoints: {
     values: {
@@ -87,6 +90,25 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           padding: 0,
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          padding: '8px 0px',
+          color: '#FFFFFF',
+          fontSize: '16px',
+          '&::placeholder': {
+            color: '#718096',
+          },
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          borderBottom: '1px solid #4A5568',
         },
       },
     },

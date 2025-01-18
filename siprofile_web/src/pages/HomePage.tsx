@@ -9,7 +9,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <PageContainer>
+    <PageContainer pageHistory={[]}>
       <PageDescription
         pageTitle="사이프로필"
         pageSubTitle="당신만의 특별한 프로필을 만들어보세요"
