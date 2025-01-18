@@ -1,7 +1,6 @@
 import { ReactElement } from 'react';
 import { Box, IconButton } from '@mui/material';
 import { ArrowLeftIcon } from '../assets';
-import { useNavigate } from 'react-router-dom';
 
 type PageContainerProps = {
   children?: ReactElement | ReactElement[];
@@ -10,8 +9,6 @@ type PageContainerProps = {
 };
 
 const PageContainer = ({ pageHistory, children, onBack }: PageContainerProps) => {
-  const navigate = useNavigate();
-
   return (
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
       <Box width="100%" height="64px" p="16px 24px">

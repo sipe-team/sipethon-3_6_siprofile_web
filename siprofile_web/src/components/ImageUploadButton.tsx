@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import cat from '../assets/cat.png';
 import { IconButton, Theme, IconButtonProps } from '@mui/material';
 import styled from '@emotion/styled';
@@ -13,10 +14,17 @@ const StyledIconButton = styled(IconButton)(({ theme }) => {
 });
 
 const ImageUploadButton = (props: IconButtonProps) => {
+  const uploadRef = useRef<HTMLInputElement>(null);
+
+  const handleFileChange = () => {};
+
   return (
-    <StyledIconButton {...props}>
-      <img src={cat} alt="image-upload" width={64} height={54} />
-    </StyledIconButton>
+    <>
+      <StyledIconButton {...props}>
+        <img src={cat} alt="image-upload" width={64} height={54} />
+      </StyledIconButton>
+      <input type="file" accept="image/*" ref={uploadRef} />
+    </>
   );
 };
 
