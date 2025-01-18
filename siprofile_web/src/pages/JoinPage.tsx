@@ -5,21 +5,24 @@ import PageDescription from '../components/PageDescription';
 import { Box } from '@mui/material';
 import Form from '../components/Form';
 
-const SignInPage = () => {
+const JoinPage = () => {
   return (
     <PageContainer pageHistory={[]}>
-      <PageDescription pageTitle="로그인" pageSubTitle="사이프로필" boxProps={{ mb: '56px' }} />
+      <PageDescription pageTitle="회원가입" pageSubTitle="사이프로필" boxProps={{ mb: '56px' }} />
       <Box width="100%" p="16px 24px">
         <Form placeholder="sipe@email.com" type="email" label="이메일" />
       </Box>
       <Box width="100%" p="16px 24px">
         <Form placeholder="****" type="password" label="비밀번호" />
       </Box>
+      <Box width="100%" p="16px 24px">
+        <Form placeholder="****" type="password" label="비밀번호 확인" />
+      </Box>
       <FloatingButtonContainer>
-        <ContainedSecondaryButton>로그인</ContainedSecondaryButton>
+        <ContainedSecondaryButton>회원가입</ContainedSecondaryButton>
       </FloatingButtonContainer>
     </PageContainer>
   );
 };
 
-export default SignInPage;
+export default JoinPage;

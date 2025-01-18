@@ -3,6 +3,7 @@ import TestPage from '../pages/TestPage';
 import Layout from '../pages/Layout';
 import HomePage from '../pages/HomePage';
 import SignInPage from '../pages/SignInPage';
+import JoinPage from '../pages/JoinPage';
 
 const Router = () => {
   return (
@@ -11,7 +12,7 @@ const Router = () => {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/sign-in" element={<SignInPage />} />
-          <Route path="/test" element={<TestPage />} />
+          <Route path="/join" element={<JoinPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
