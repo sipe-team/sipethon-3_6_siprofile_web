@@ -1,4 +1,5 @@
 import { Button, Typography, Box } from '@mui/material';
+import Qrcode from '../components/Qrcode';
 
 const TestPage = () => {
   return (
@@ -10,6 +11,10 @@ const TestPage = () => {
         <Typography variant="body2">Body 2</Typography>
         <Button variant="text">Button</Button>
       </Box>
+
+      <div>
+        <Qrcode url="https://www.naver.com" />
+      </div>
     </div>
   );
 };
