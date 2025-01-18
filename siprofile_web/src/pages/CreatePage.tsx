@@ -122,7 +122,7 @@ const Position = () => {
 
   if (pageHistoryContext && createCardContext) {
     const { pageHistory, setPageHistory } = pageHistoryContext;
-    const { name, position, setPosition } = createCardContext;
+    const { name } = createCardContext;
 
     return (
       <>
