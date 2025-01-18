@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage';
 import SignInPage from '../pages/SignInPage';
 import JoinPage from '../pages/JoinPage';
 import CreatePage from '../pages/CreatePage';
+import ViewPage from '../pages/ViewPage';
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/join" element={<JoinPage />} />
           <Route path="/create" element={<CreatePage />} />
+          <Route path="/view" element={<ViewPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
